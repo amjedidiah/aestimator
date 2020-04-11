@@ -7,10 +7,10 @@ var CURRENT_CACHES = {
 self.addEventListener("install", function (event) {
   var urlsToPrefetch = ["./", "./css", "./js", "./img"];
 
-  console.log(
-    "Handling install event. Resources to pre-fetch:",
-    urlsToPrefetch
-  );
+  // console.log(
+  //   "Handling install event. Resources to pre-fetch:",
+  //   urlsToPrefetch
+  // );
 
   event.waitUntil(
     caches
@@ -35,7 +35,7 @@ self.addEventListener("activate", function (event) {
       return Promise.all(
         cacheNames.map(function (cacheName) {
           if (expectedCacheNames.indexOf(cacheName) == -1) {
-            console.log("Deleting out of date cache:", cacheName);
+            // console.log("Deleting out of date cache:", cacheName);
 
             return caches.delete(cacheName);
           }
@@ -46,7 +46,7 @@ self.addEventListener("activate", function (event) {
 });
 
 self.addEventListener("fetch", function (event) {
-  console.log("Handling fetch event for", event.request.url);
+  // console.log("Handling fetch event for", event.request.url);
 
   event.respondWith(
     caches.match(event.request).then(function (response) {
