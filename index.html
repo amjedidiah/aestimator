@@ -54,8 +54,8 @@
     <link rel="dns-prefetch" href="//www.google.com" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
     <!-- Google FOnts -->
     <link
@@ -104,9 +104,9 @@
       </header>
 
       <div class="jumbotron jumbotron-fluid h-md-100 my-0" role="article">
-        <div class="container h-md-100 my-0" role="grid">
+        <div class="container h-md-100 my-0" role="none">
           <form method="post" class="h-md-100" id="inputForm">
-            <div class="row h-md-100 align-items-center" role="row">
+            <div class="row h-md-100 align-items-center" role="none">
               <section class="col mb-5 mb-md-0 p-4 section-info">
                 <h1 class="display-4">Aestimator</h1>
                 <div>
@@ -134,14 +134,20 @@
                   <a
                     href="https://www.google.com/search?q=covid+19&rlz=1C1CHBF_enNG877NG877&oq=covid+19+&aqs=chrome..69i57j0l4j69i60l3.4226j0j7&sourceid=chrome&ie=UTF-8#wptab=s:H4sIAAAAAAAAAONgVuLVT9c3NMwySk6OL8zJecTozS3w8sc9YSmnSWtOXmO04eIKzsgvd80rySypFNLjYoOyVLgEpVB1ajBI8XOhCvHsYuL2SE3MKckILkksKV7EKpicX5Sfl1iWWVRarFAMEgMAoubRkIEAAAA"
                     class="btn btn-outline-primary"
+                    rel="nofollow"
                   >
-                    <i class="fas fa-info-circle mr-2"></i> Learn More
+                    <i class="fas fa-info-circle mr-2" id="infoStats"></i>
+                    Covid-19 Statistics
                   </a>
                   <button
                     class="btn btn-outline-success btn-lg d-none d-md-inline ml-lg-4"
                     type="submit"
                   >
-                    <i class="fas fa-paper-plane mr-2"></i> Submit
+                    <i
+                      class="fas fa-paper-plane mr-2"
+                      id="formDesktopSubmit"
+                    ></i>
+                    Submit
                   </button>
                 </div>
               </section>
@@ -149,13 +155,17 @@
                 <div class="card-columns" role="none">
                   <div class="card" role="none">
                     <div class="card-body bg-primary" role="none">
-                      <i class="fa-card-title fas fa-users"></i>
+                      <i
+                        class="fa-card-title fas fa-users"
+                        id="formPopulationTitle"
+                      ></i>
                       <h5 class="card-title">Population</h5>
                       <p class="card-text">
                         The number of people within the region.
                       </p>
 
                       <div class="form-group" role="none">
+                        <label for="population"></label>
                         <input
                           type="number"
                           min="0"
@@ -168,14 +178,18 @@
                         />
                       </div>
                       <button class="float-right btn-done" type="button">
-                        <i class="fas fa-check mr-2"></i>Done
+                        <i class="fas fa-check mr-2" id="formPopulationDone"></i
+                        >Done
                       </button>
                       <div class="clear" role="separator"></div>
                     </div>
                   </div>
                   <div class="card" role="none">
                     <div class="card-body bg-pink" role="none">
-                      <i class="fa-card-title fas fa-hourglass-start"></i>
+                      <i
+                        class="fa-card-title fas fa-hourglass-start"
+                        id="formTimeToElapseTitle"
+                      ></i>
                       <h5 class="card-title">Time to Elapse</h5>
                       <p class="card-text">
                         Duration for which the estimation for the region should
@@ -183,6 +197,7 @@
                       </p>
 
                       <div class="form-group" role="none">
+                        <label for="timeToElapse"></label>
                         <input
                           type="number"
                           min="0"
@@ -195,8 +210,8 @@
                         />
                       </div>
 
-                      <div class="form-check p-0">
-                        <label class="switch" for="periodType1">
+                      <div class="form-check p-0" role="none">
+                        <div class="switch" role="none">
                           <input
                             type="radio"
                             name="period-type"
@@ -206,15 +221,16 @@
                             data-period-type
                             checked
                           />
+                          <label for="periodType1"></label>
                           <span class="slider round" role="none"></span>
-                        </label>
+                        </div>
                         <small id="helpPeriodType1" class="text-white"
                           >days</small
                         >
                       </div>
 
-                      <div class="form-check p-0">
-                        <label class="switch" for="periodType2">
+                      <div class="form-check p-0" role="none">
+                        <div class="switch" role="none">
                           <input
                             type="radio"
                             name="period-type"
@@ -223,15 +239,16 @@
                             value="weeks"
                             data-period-type
                           />
+                          <label for="periodType2"></label>
                           <span class="slider round" role="none"></span>
-                        </label>
+                        </div>
                         <small id="helpPeriodType2" class="text-white"
                           >weeks</small
                         >
                       </div>
 
-                      <div class="form-check p-0">
-                        <label class="switch" for="periodType3">
+                      <div class="form-check p-0" role="none">
+                        <div class="switch" role="none">
                           <input
                             type="radio"
                             name="period-type"
@@ -240,28 +257,34 @@
                             value="months"
                             data-period-type
                           />
+                          <label for="periodType3"></label>
                           <span class="slider round" role="none"></span>
-                        </label>
+                        </div>
                         <small id="helpPeriodType3" class="text-white"
                           >months</small
                         >
                       </div>
 
                       <button class="float-right btn-done" type="button">
-                        <i class="fas fa-check mr-2"></i>Done
+                        <i class="fas fa-check mr-2" id="formPeriodTypeDone"></i
+                        >Done
                       </button>
                       <div class="clear" role="separator"></div>
                     </div>
                   </div>
                   <div class="card" role="none">
                     <div class="card-body bg-secondary" role="none">
-                      <i class="fa-card-title fas fa-file-medical-alt"></i>
+                      <i
+                        class="fa-card-title fas fa-file-medical-alt"
+                        id="formReportedCasesTitle"
+                      ></i>
                       <h5 class="card-title">Reported Cases</h5>
                       <p class="card-text">
                         Number of reported cases within the region
                       </p>
 
                       <div class="form-group" role="none">
+                        <label for="reportedCases"></label>
                         <input
                           type="number"
                           min="0"
@@ -274,14 +297,21 @@
                         />
                       </div>
                       <button class="float-right btn-done" type="button">
-                        <i class="fas fa-check mr-2"></i>Done
+                        <i
+                          class="fas fa-check mr-2"
+                          id="formReportedCasesDone"
+                        ></i
+                        >Done
                       </button>
                       <div class="clear" role="separator"></div>
                     </div>
                   </div>
                   <div class="card" role="none">
                     <div class="card-body shadow-lg bg-warning" role="none">
-                      <i class="fa-card-title fas fa-procedures"></i>
+                      <i
+                        class="fa-card-title fas fa-procedures"
+                        id="formHospitalBedsTitle"
+                      ></i>
                       <h5 class="card-title">Total Hospital Beds</h5>
                       <p class="card-text">
                         Total number of available hospital beds in all the
@@ -289,6 +319,7 @@
                       </p>
 
                       <div class="form-group">
+                        <label for="totalHospitalBeds"></label>
                         <input
                           type="number"
                           min="0"
@@ -302,7 +333,11 @@
                       </div>
 
                       <button class="float-right btn-done" type="button">
-                        <i class="fas fa-check mr-2"></i>Done
+                        <i
+                          class="fas fa-check mr-2"
+                          id="formHospitalBedsDone"
+                        ></i
+                        >Done
                       </button>
                       <div class="clear" role="separator"></div>
                     </div>
@@ -314,7 +349,8 @@
               class="btn btn-success btn-lg d-md-none w-100 btn-send"
               type="submit"
             >
-              <i class="fas fa-paper-plane mr-2"></i> Submit
+              <i class="fas fa-paper-plane mr-2" id="formMobileSubmit"></i>
+              Submit
             </button>
           </form>
         </div>
@@ -365,28 +401,28 @@
       (function (window) {
         let undefined,
           link = function (href) {
-            let a = window.document.createElement('a');
+            let a = window.document.createElement("a");
             a.href = href;
             return a;
           };
         window.onerror = function (message, file, line, column) {
           let host = link(file).hostname;
-          ga('send', {
-            hitType: 'event',
+          ga("send", {
+            hitType: "event",
             eventCategory:
               (host == window.location.hostname ||
               host == undefined ||
-              host == ''
-                ? ''
-                : 'external ') + 'error',
+              host == ""
+                ? ""
+                : "external ") + "error",
             eventAction: message,
             eventLabel: (
               file +
-              ' LINE: ' +
+              " LINE: " +
               line +
-              (column ? ' COLUMN: ' + column : '')
+              (column ? " COLUMN: " + column : "")
             ).trim(),
-            nonInteraction: 1
+            nonInteraction: 1,
           });
         };
       })(window);
@@ -408,25 +444,25 @@
             //page scrolled to 90%
             isDuplicateScrollEvent = 1;
             ga(
-              'send',
-              'event',
-              'scroll',
-              'Window: ' +
+              "send",
+              "event",
+              "scroll",
+              "Window: " +
                 $window.height() +
-                'px; Document: ' +
+                "px; Document: " +
                 $document.height() +
-                'px; Time: ' +
+                "px; Time: " +
                 Math.round((new Date() - scrollTimeStart) / 1000, 1) +
-                's'
+                "s"
             );
           }
         });
       });
       ga.q = [];
       ga.l = +new Date();
-      ga('create', 'UA-XXXXX-Y', 'auto');
-      ga('set', 'transport', 'beacon');
-      ga('send', 'pageview');
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
   </body>

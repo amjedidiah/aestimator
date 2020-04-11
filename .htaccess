@@ -1023,7 +1023,7 @@ ServerSignature Off
 # https://developers.google.com/speed/pagespeed/module/configuration#notransform
 
 # <IfModule mod_headers.c>
-#     Header merge Cache-Control "no-transform"
+#     Header set Cache-Control "max-age=2628000, public"
 # </IfModule>
 
 # ----------------------------------------------------------------------
