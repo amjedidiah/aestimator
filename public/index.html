@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Aestimator</title>
+    <meta
+      name="description"
+      content="Jedidiah Amaraegbu's version of the Covid-19 Estimator for the BuildForSDG Challenge by Facebook in 2020"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      Give name for pinning site to Taskbar on WIndows.
+    -->
+    <meta name="application-name" content="Aestimator" />
+    <!--
+      Give site tooltip for pinning
+    -->
+    <meta
+      name="msapplication-tooltip"
+      content="Jedidiah Amaraegbu's version of the Covid-19 Estimator for the BuildForSDG Challenge by Facebook in 2020"
+    />
+    <!-- Make it possible to pin app on mobile -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Get Site to look like app on iOS  -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!--
+      Add Title for when site is pinned to iOS screen
+    -->
+    <meta name="apple-mobile-web-app-title" content="Aestimator" />
+    <meta name="theme-color" content="#161940" />
+
+    <!--
+      Add icon for when pinned to iOS & any other mobile
+     -->
+    <link rel="icon" sizes="192x192" href="highres-icon.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!--
+      Display certain image when site is loaded as app on iOS
+     -->
+    <!-- <link
+      rel="apple-touch-startup-image"
+      media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)"
+      href="img/startup.png"
+    /> -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <!--
+      DNS Prefetching: prefetches the site that is included in the href
+    -->
+    <link rel="dns-prefetch" href="//www.google.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Google FOnts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@100;200;300;400;500;523;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;523;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/a2ea8d437a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- BootStrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Master CSS -->
+    <link rel="stylesheet" href="./css/master.css" />
+  </head>
+
+  <body>
+    <!-- [if IE]>
+    <p class="browserupgrade">
+      You are using an <strong>outdated</strong> browser. Please
+      <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+      your experience and security.
+    </p>
+    <![endif] -->
+
+    <!-- Document Main Content -->
+    <main class="h-100">
+      <!-- Document Header -->
+      <header>
+        <nav></nav>
+      </header>
+
+      <div class="jumbotron jumbotron-fluid h-md-100 my-0" role="article">
+        <div class="container h-md-100 my-0" role="grid">
+          <form method="post" class="h-md-100" id="inputForm">
+            <div class="row h-md-100 align-items-center" role="row">
+              <section class="col mb-5 mb-md-0 p-4 section-info">
+                <h1 class="display-4">Aestimator</h1>
+                <div>
+                  <p class="lead">
+                    <strong>novelty</strong> COVID-19 infections estimator
+                  </p>
+                  <div>
+                    <span>
+                      Aestimator attempts helping society and leaders prepare
+                      for the real rig problem of COVID-19, which is its
+                      <strong
+                        >impact on lives, our health systems, and the
+                        economy</strong
+                      >
+                    </span>
+                    <p class="text-warning">
+                      Provide Aestimator with the requested data
+                      <span class="d-md-none" role="note">below</span>
+                      <span class="d-none d-md-inline" role="note"
+                        >on the right</span
+                      >
+                      and submit to receive an impact estimatation
+                    </p>
+                  </div>
+                  <a
+                    href="https://www.google.com/search?q=covid+19&rlz=1C1CHBF_enNG877NG877&oq=covid+19+&aqs=chrome..69i57j0l4j69i60l3.4226j0j7&sourceid=chrome&ie=UTF-8#wptab=s:H4sIAAAAAAAAAONgVuLVT9c3NMwySk6OL8zJecTozS3w8sc9YSmnSWtOXmO04eIKzsgvd80rySypFNLjYoOyVLgEpVB1ajBI8XOhCvHsYuL2SE3MKckILkksKV7EKpicX5Sfl1iWWVRarFAMEgMAoubRkIEAAAA"
+                    class="btn btn-outline-primary"
+                  >
+                    <i class="fas fa-info-circle mr-2"></i> Learn More
+                  </a>
+                  <button
+                    class="btn btn-outline-success btn-lg d-none d-md-inline ml-lg-4"
+                    type="submit"
+                  >
+                    <i class="fas fa-paper-plane mr-2"></i> Submit
+                  </button>
+                </div>
+              </section>
+              <section class="col-12 col-md-7 col-lg-8 section-form py-3">
+                <div class="card-columns" role="none">
+                  <div class="card" role="none">
+                    <div class="card-body bg-primary" role="none">
+                      <i class="fa-card-title fas fa-users"></i>
+                      <h5 class="card-title">Population</h5>
+                      <p class="card-text">
+                        The number of people within the region.
+                      </p>
+
+                      <div class="form-group" role="none">
+                        <input
+                          type="number"
+                          min="0"
+                          name="population"
+                          id="population"
+                          class="form-control form-control-primary"
+                          placeholder="Population"
+                          data-population
+                          required
+                        />
+                      </div>
+                      <button class="float-right btn-done" type="button">
+                        <i class="fas fa-check mr-2"></i>Done
+                      </button>
+                      <div class="clear" role="separator"></div>
+                    </div>
+                  </div>
+                  <div class="card" role="none">
+                    <div class="card-body bg-pink" role="none">
+                      <i class="fa-card-title fas fa-hourglass-start"></i>
+                      <h5 class="card-title">Time to Elapse</h5>
+                      <p class="card-text">
+                        Duration for which the estimation for the region should
+                        last
+                      </p>
+
+                      <div class="form-group" role="none">
+                        <input
+                          type="number"
+                          min="0"
+                          name="time-to-elapse"
+                          id="timeToElapse"
+                          class="form-control form-control-pink"
+                          placeholder="Time to Elapse"
+                          data-time-to-elapse
+                          required
+                        />
+                      </div>
+
+                      <div class="form-check p-0">
+                        <label class="switch" for="periodType1">
+                          <input
+                            type="radio"
+                            name="period-type"
+                            id="periodType1"
+                            class="form-control"
+                            value="days"
+                            data-period-type
+                            checked
+                          />
+                          <span class="slider round" role="none"></span>
+                        </label>
+                        <small id="helpPeriodType1" class="text-white"
+                          >days</small
+                        >
+                      </div>
+
+                      <div class="form-check p-0">
+                        <label class="switch" for="periodType2">
+                          <input
+                            type="radio"
+                            name="period-type"
+                            id="periodType2"
+                            class="form-control"
+                            value="weeks"
+                            data-period-type
+                          />
+                          <span class="slider round" role="none"></span>
+                        </label>
+                        <small id="helpPeriodType2" class="text-white"
+                          >weeks</small
+                        >
+                      </div>
+
+                      <div class="form-check p-0">
+                        <label class="switch" for="periodType3">
+                          <input
+                            type="radio"
+                            name="period-type"
+                            id="periodType3"
+                            class="form-control"
+                            value="months"
+                            data-period-type
+                          />
+                          <span class="slider round" role="none"></span>
+                        </label>
+                        <small id="helpPeriodType3" class="text-white"
+                          >months</small
+                        >
+                      </div>
+
+                      <button class="float-right btn-done" type="button">
+                        <i class="fas fa-check mr-2"></i>Done
+                      </button>
+                      <div class="clear" role="separator"></div>
+                    </div>
+                  </div>
+                  <div class="card" role="none">
+                    <div class="card-body bg-secondary" role="none">
+                      <i class="fa-card-title fas fa-file-medical-alt"></i>
+                      <h5 class="card-title">Reported Cases</h5>
+                      <p class="card-text">
+                        Number of reported cases within the region
+                      </p>
+
+                      <div class="form-group" role="none">
+                        <input
+                          type="number"
+                          min="0"
+                          name="reported-cases"
+                          id="reportedCases"
+                          class="form-control form-control-secondary"
+                          placeholder="Reported Cases"
+                          data-reported-cases
+                          required
+                        />
+                      </div>
+                      <button class="float-right btn-done" type="button">
+                        <i class="fas fa-check mr-2"></i>Done
+                      </button>
+                      <div class="clear" role="separator"></div>
+                    </div>
+                  </div>
+                  <div class="card" role="none">
+                    <div class="card-body shadow-lg bg-warning" role="none">
+                      <i class="fa-card-title fas fa-procedures"></i>
+                      <h5 class="card-title">Total Hospital Beds</h5>
+                      <p class="card-text">
+                        Total number of available hospital beds in all the
+                        hospitals within the region
+                      </p>
+
+                      <div class="form-group">
+                        <input
+                          type="number"
+                          min="0"
+                          name="total-hospital-beds"
+                          id="totalHospitalBeds"
+                          class="form-control form-control-warning"
+                          placeholder="Total Hospital Beds"
+                          data-total-hospital-beds
+                          required
+                        />
+                      </div>
+
+                      <button class="float-right btn-done" type="button">
+                        <i class="fas fa-check mr-2"></i>Done
+                      </button>
+                      <div class="clear" role="separator"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <button
+              class="btn btn-success btn-lg d-md-none w-100 btn-send"
+              type="submit"
+            >
+              <i class="fas fa-paper-plane mr-2"></i> Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Document Footer -->
+      <footer>
+        <nav></nav>
+      </footer>
+    </main>
+
+    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
+        );
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js, then Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- ?: Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+
+      // Track js errors in Google Analytics
+      (function (window) {
+        let undefined,
+          link = function (href) {
+            let a = window.document.createElement('a');
+            a.href = href;
+            return a;
+          };
+        window.onerror = function (message, file, line, column) {
+          let host = link(file).hostname;
+          ga('send', {
+            hitType: 'event',
+            eventCategory:
+              (host == window.location.hostname ||
+              host == undefined ||
+              host == ''
+                ? ''
+                : 'external ') + 'error',
+            eventAction: message,
+            eventLabel: (
+              file +
+              ' LINE: ' +
+              line +
+              (column ? ' COLUMN: ' + column : '')
+            ).trim(),
+            nonInteraction: 1
+          });
+        };
+      })(window);
+
+      // Track page scroll in Google Analytics
+      $(function () {
+        let isDuplicateScrollEvent,
+          scrollTimeStart = new Date(),
+          $window = $(window),
+          $document = $(document),
+          scrollPercent;
+
+        $window.scroll(function () {
+          scrollPercent = Math.round(
+            (100 * ($window.height() + $window.scrollTop())) /
+              $document.height()
+          );
+          if (scrollPercent > 90 && !isDuplicateScrollEvent) {
+            //page scrolled to 90%
+            isDuplicateScrollEvent = 1;
+            ga(
+              'send',
+              'event',
+              'scroll',
+              'Window: ' +
+                $window.height() +
+                'px; Document: ' +
+                $document.height() +
+                'px; Time: ' +
+                Math.round((new Date() - scrollTimeStart) / 1000, 1) +
+                's'
+            );
+          }
+        });
+      });
+      ga.q = [];
+      ga.l = +new Date();
+      ga('create', 'UA-XXXXX-Y', 'auto');
+      ga('set', 'transport', 'beacon');
+      ga('send', 'pageview');
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>
