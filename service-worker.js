@@ -74,15 +74,9 @@ self.addEventListener("install", function (event) {
     caches
       .open(CURRENT_CACHES["prefetch"])
       .then(function (cache) {
-        return cache
-          .addAll(
-            urlsToPrefetch.map(function (urlToPrefetch) {
-              return new Request(urlToPrefetch, { mode: "no-cors" });
-            })
-          )
-          .then(function () {
-            console.log("All resources have been fetched and cached.");
-          });
+        return cache.addAll(urlsToPrefetch).then(function () {
+          console.log("All resources have been fetched and cached.");
+        });
       })
       .catch(function (error) {
         console.error("Pre-fetching failed:", error);
