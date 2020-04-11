@@ -1,14 +1,14 @@
 // var CACHE_NAME = "my-site-cache-v2";
 // var urlsToCache = ["./", "css", "js", "img"];
 
-self.addEventListener("install", function (event) {
-  // Perform install steps
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) {
-      return cache.addAll(urlsToCache);
-    })
-  );
-});
+// self.addEventListener("install", function (event) {
+//   // Perform install steps
+//   event.waitUntil(
+//     caches.open(CACHE_NAME).then(function (cache) {
+//       return cache.addAll(urlsToCache);
+//     })
+//   );
+// });
 
 //! self.addEventListener("fetch", function (event) {
 //!   event.respondWith(
@@ -74,7 +74,7 @@ self.addEventListener("install", function (event) {
     caches
       .open(CURRENT_CACHES["prefetch"])
       .then(function (cache) {
-        return cache.addAll(urlsToPrefetch));
+        return cache.addAll(urlsToPrefetch);
       })
       .catch(function (error) {
         console.error("Pre-fetching failed:", error);
