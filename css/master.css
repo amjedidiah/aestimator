@@ -1,7 +1,7 @@
 * {
   font-family: 'Montserrat', sans-serif;
   word-wrap: break-word !important;
-  transition: all 0.25s ease-out;
+  transition: all 0.2s ease-out;
   font-size: 97.5%;
 
   -webkit-box-sizing: border-box !important;
@@ -65,14 +65,14 @@ textarea {
 
 .jumbotron section {
   /* Animation for all elements */
-  animation-duration: 2s;
+  animation-duration: 0.4s;
   animation-name: slideInLeft;
 }
 
 .jumbotron section.section-form {
   /* Animation for all elements */
   animation-name: fadeIn;
-  animation-duration: 4s;
+  animation-duration: 0.8s;
 }
 
 .jumbotron .card {
