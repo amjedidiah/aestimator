@@ -9,7 +9,7 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "/aestimator",
+  "start_url": "/aestimator/?utm_source=homescreen",
   "background_color": "#161940",
   "theme_color": "#161940"
 }
