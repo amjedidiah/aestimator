@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Jedidiah Amaraegbu -- Designer | Developer -- @am_jedidiah
 
 # THANKS
 
-    <name>
+  Jedidiah Amaraegbu
 
 # TECHNOLOGY COLOPHON
 
