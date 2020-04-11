@@ -17,3 +17,7 @@ $("form#inputForm").on(
 $(`input[type="number"]`).on("focus", (e) => makeCardPulse(e.target));
 $(`input[type="number"]`).on("change", () => makeCardNormal());
 $(`.btn-done`).on("click", () => makeCardNormal());
+
+// Disable console logging
+console.log = function () {};
+console.info = function () {};
