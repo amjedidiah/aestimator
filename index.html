@@ -481,7 +481,9 @@
     <script>
       // ServiceWorker is a progressive technology. Ignore unsupported browsers
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("service-worker.js");
+        window.addEventListener("load", () =>
+          navigator.serviceWorker.register("service-worker.js")
+        );
       }
     </script>
   </body>
