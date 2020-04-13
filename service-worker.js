@@ -5,7 +5,7 @@ var CURRENT_CACHES = {
 };
 
 self.addEventListener("install", function (event) {
-  var urlsToPrefetch = ["./", "css", "js",];
+  var urlsToPrefetch = ["./", "css", "js"];
 
   // console.log(
   //   "Handling install event. Resources to pre-fetch:",
