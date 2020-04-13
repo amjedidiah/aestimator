@@ -19,5 +19,5 @@ $(`input[type="number"]`).on("change", () => makeCardNormal());
 $(`.btn-done`).on("click", () => makeCardNormal());
 
 // Disable console logging
-// console.log = function () {};
-// console.info = function () {};
+console.log = function () {};
+console.info = function () {};
