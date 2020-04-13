@@ -46,18 +46,18 @@ self.addEventListener("fetch", (event) =>
   )
 );
 
-self.addEventListener("activate", (event) => {
-  var cacheWhitelist = ["pages-cache-v1", "blog-posts-cache-v1"];
+// self.addEventListener("activate", (event) => {
+//   var cacheWhitelist = ["pages-cache-v1", "blog-posts-cache-v1"];
 
-  event.waitUntil(
-    caches.keys().then((cacheNames) =>
-      Promise.all(
-        cacheNames.map( (cacheName) => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        })
-      )
-    )
-  );
-});
+//   event.waitUntil(
+//     caches.keys().then((cacheNames) =>
+//       Promise.all(
+//         cacheNames.map( (cacheName) => {
+//           if (cacheWhitelist.indexOf(cacheName) === -1) {
+//             return caches.delete(cacheName);
+//           }
+//         })
+//       )
+//     )
+//   );
+// });
