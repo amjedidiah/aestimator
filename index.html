@@ -62,10 +62,10 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@100;200;300;400;500;523;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;523;600;700;800;900&display=swap"
       rel="stylesheet"
     /> -->
-    <!-- <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
-    /> -->
+    />
 
     <!-- Animate CSS -->
     <link
@@ -158,14 +158,15 @@
                         class="fa-card-title fas fa-users"
                         id="formPopulationTitle"
                       ></i>
-                      <h5 class="card-title">Region Population</h5>
+                      <h5 class="card-title">
+                        <label for="population">Region Population</label>
+                      </h5>
                       <p class="card-text">
                         Number of people within the region we are estimating
                         for.
                       </p>
 
                       <div class="form-group" role="none">
-                        <label for="population"></label>
                         <input
                           type="number"
                           min="0"
@@ -190,14 +191,15 @@
                         class="fa-card-title fas fa-hourglass-start"
                         id="formTimeToElapseTitle"
                       ></i>
-                      <h5 class="card-title">Time to Elapse</h5>
+                      <h5 class="card-title">
+                        <label for="timeToElapse">Time to Elapse</label>
+                      </h5>
                       <p class="card-text">
                         Duration for which the estimation for the region should
                         last
                       </p>
 
                       <div class="form-group" role="none">
-                        <label for="timeToElapse"></label>
                         <input
                           type="number"
                           min="0"
@@ -224,7 +226,7 @@
                           <span class="slider round" role="none"></span>
                         </label>
                         <small id="helpPeriodType1" class="text-white"
-                          >days</small
+                          ><label for="periodType1"> days</label></small
                         >
                       </div>
 
@@ -241,7 +243,7 @@
                           <span class="slider round" role="none"></span>
                         </label>
                         <small id="helpPeriodType2" class="text-white"
-                          >weeks</small
+                          ><label for="periodType2"> weeks</label></small
                         >
                       </div>
 
@@ -258,7 +260,7 @@
                           <span class="slider round" role="none"></span>
                         </label>
                         <small id="helpPeriodType3" class="text-white"
-                          >months</small
+                          ><label for="periodType3"> months</label></small
                         >
                       </div>
 
@@ -275,13 +277,14 @@
                         class="fa-card-title fas fa-file-medical-alt"
                         id="formReportedCasesTitle"
                       ></i>
-                      <h5 class="card-title">Reported Cases</h5>
+                      <h5 class="card-title">
+                        <label for="reportedCases">Reported Cases</label>
+                      </h5>
                       <p class="card-text">
                         Number of reported cases within the region
                       </p>
 
                       <div class="form-group" role="none">
-                        <label for="reportedCases"></label>
                         <input
                           type="number"
                           min="0"
@@ -309,14 +312,17 @@
                         class="fa-card-title fas fa-procedures"
                         id="formHospitalBedsTitle"
                       ></i>
-                      <h5 class="card-title">Total Hospital Beds</h5>
+                      <h5 class="card-title">
+                        <label for="totalHospitalBeds"
+                          >Total Hospital Beds</label
+                        >
+                      </h5>
                       <p class="card-text">
                         Total number of available hospital beds in all the
                         hospitals within the region
                       </p>
 
                       <div class="form-group">
-                        <label for="totalHospitalBeds"></label>
                         <input
                           type="number"
                           min="0"
