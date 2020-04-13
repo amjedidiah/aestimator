@@ -1,61 +1,30 @@
-var CACHE_VERSION = 1;
-var CURRENT_CACHES = {
-  prefetch: "prefetch-cache-v" + CACHE_VERSION,
-  font: "font-cache-v" + CACHE_VERSION,
-};
+var CACHE_NAME = "my-site-cache-v1";
+var urlsToCache = [
+  "/",
+  "./js/vendor/jquery-3.4.1.min.js",
+  "./js/vendor/modernizr-3.8.0.min.js",
+  "./js/main.js",
+  "./js/plugins.js",
+  "./css/master.css",
+  "./css/normalize.min.css",
+];
 
-self.addEventListener("install", function (event) {
-  var urlsToPrefetch = ["./", "css", "js"];
-
-  // console.log(
-  //   "Handling install event. Resources to pre-fetch:",
-  //   urlsToPrefetch
-  // );
-
+self.addEventListener("install", (event) =>
+  // Perform install steps
   event.waitUntil(
-    caches
-      .open(CURRENT_CACHES["prefetch"])
-      .then(function (cache) {
-        return cache.addAll(urlsToPrefetch);
-      })
-      .catch(function (error) {
-        console.error("Pre-fetching failed:", error);
-      })
-  );
-});
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
+  )
+);
 
-self.addEventListener("activate", function (event) {
-  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function (key) {
-    return CURRENT_CACHES[key];
-  });
-
-  // Active worker won't be treated as activated until promise resolves successfully.
-  event.waitUntil(
-    caches.keys().then(function (cacheNames) {
-      return Promise.all(
-        cacheNames.map(function (cacheName) {
-          if (expectedCacheNames.indexOf(cacheName) == -1) {
-            // console.log("Deleting out of date cache:", cacheName);
-
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-});
-
-self.addEventListener("fetch", function (event) {
-  // console.log("Handling fetch event for", event.request.url);
-
+self.addEventListener("fetch", (event) =>
   event.respondWith(
-    caches.match(event.request).then(function (response) {
+    caches.match(event.request).then((response) => {
       // Cache hit - return response
       if (response) {
         return response;
       }
 
-      return fetch(event.request).then(function (response) {
+      return fetch(event.request).then((response) => {
         // Check if we received a valid response
         if (!response || response.status !== 200 || response.type !== "basic") {
           return response;
@@ -67,33 +36,28 @@ self.addEventListener("fetch", function (event) {
         // to clone it so we have two streams.
         var responseToCache = response.clone();
 
-        caches.open(CURRENT_CACHES["prefetch"]).then(function (cache) {
-          cache.put(event.request, responseToCache);
-        });
+        caches
+          .open(CACHE_NAME)
+          .then((cache) => cache.put(event.request, responseToCache));
 
         return response;
       });
     })
+  )
+);
+
+self.addEventListener("activate", (event) => {
+  var cacheWhitelist = ["pages-cache-v1", "blog-posts-cache-v1"];
+
+  event.waitUntil(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames.map( (cacheName) => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      )
+    )
   );
-
-  // event.respondWith(
-  //   // Opens Cache objects that start with 'font'.
-  //   caches.open(CURRENT_CACHES["font"]).then(function (cache) {
-  //     return cache
-  //       .match(event.request)
-  //       .then(function (response) {
-  //         if (response) {
-  //           console.log(" Found response in cache:", response);
-
-  //           return response;
-  //         }
-  //       })
-  //       .catch(function (error) {
-  //         // Handles exceptions that arise from match() or fetch().
-  //         console.error("  Error in fetch handler:", error);
-
-  //         throw error;
-  //       });
-  //   })
-  // );
 });
