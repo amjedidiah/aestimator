@@ -1,12 +1,12 @@
 var CACHE_NAME = "my-site-cache-v1";
 var urlsToCache = [
   "/",
-  "./js/vendor/jquery-3.4.1.min.js",
-  "./js/vendor/modernizr-3.8.0.min.js",
-  "./js/main.js",
-  "./js/plugins.js",
-  "./css/master.css",
-  "./css/normalize.min.css",
+  "/js/vendor/jquery-3.4.1.min.js",
+  "/js/vendor/modernizr-3.8.0.min.js",
+  "/js/main.js",
+  "/js/plugins.js",
+  "/css/master.css",
+  "/css/normalize.min.css",
 ];
 
 self.addEventListener("install", (event) =>
