@@ -9,14 +9,12 @@ const submitForm = (form) => {
   console.log(form);
 };
 
-$("form#inputForm").on(
-  "submit",
-  (e) => (e.preventDefault(), submitForm(e.target))
-);
-
-$(`input[type="number"]`).on("focus", (e) => makeCardPulse(e.target));
-$(`input[type="number"]`).on("change", () => makeCardNormal());
-$(`.btn-done`).on("click", () => makeCardNormal());
+document
+  .querySelector("form#inputForm")
+  .addEventListener(
+    "submit",
+    (e) => (e.preventDefault(), submitForm(e.target))
+  );
 
 // Disable console logging
 console.log = function () {};

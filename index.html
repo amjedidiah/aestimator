@@ -158,11 +158,13 @@
                           id="population"
                           class="form-control form-control-white"
                           placeholder="Population"
+                          onfocus="makeCardPulse(this);"
+                          onchange="makeCardNormal();"
                           data-population
                           required
                         />
                       </div>
-                      <button class="float-right btn-done" type="button">
+                      <button class="float-right btn-done" type="button" onclick="makeCardNormal();">
                         <i class="fas fa-check mr-2" id="formPopulationDone"></i
                         >Done
                       </button>
@@ -191,6 +193,8 @@
                           id="timeToElapse"
                           class="form-control form-control-pink"
                           placeholder="Time to Elapse"
+                          onfocus="makeCardPulse(this);"
+                          onchange="makeCardNormal();"
                           data-time-to-elapse
                           required
                         />
@@ -248,7 +252,7 @@
                         >
                       </div>
 
-                      <button class="float-right btn-done" type="button">
+                      <button class="float-right btn-done" type="button" onclick="makeCardNormal();">
                         <i class="fas fa-check mr-2" id="formPeriodTypeDone"></i
                         >Done
                       </button>
@@ -276,11 +280,13 @@
                           id="reportedCases"
                           class="form-control form-control-secondary"
                           placeholder="Reported Cases"
+                          onfocus="makeCardPulse(this);"
+                          onchange="makeCardNormal();"
                           data-reported-cases
                           required
                         />
                       </div>
-                      <button class="float-right btn-done" type="button">
+                      <button class="float-right btn-done" type="button" onclick="makeCardNormal();">
                         <i
                           class="fas fa-check mr-2"
                           id="formReportedCasesDone"
@@ -314,12 +320,14 @@
                           id="totalHospitalBeds"
                           class="form-control form-control-warning"
                           placeholder="Total Hospital Beds"
+                          onfocus="makeCardPulse(this);"
+                          onchange="makeCardNormal();"
                           data-total-hospital-beds
                           required
                         />
                       </div>
 
-                      <button class="float-right btn-done" type="button">
+                      <button class="float-right btn-done" type="button" onclick="makeCardNormal();">
                         <i
                           class="fas fa-check mr-2"
                           id="formHospitalBedsDone"
