@@ -6,8 +6,7 @@ const filesToCache = [
   "js/plugins.js",
   "css/master.css",
   "css/normalize.min.css",
-  "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
-  "https://kit-free.fontawesome.com/releases/latest/css/free.min.css",
+  "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 ];
 const vNum = Math.floor(Math.random() * 1000000000000) + 1;
 const staticCacheName = `aestimator-cache-v${vNum}`;
