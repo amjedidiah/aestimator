@@ -1,11 +1,11 @@
 const filesToCache = [
-  "https://amjedidiah.github.io/aestimator",
-  "https://amjedidiah.github.io/aestimator/js/vendor/jquery-3.4.1.min.js",
-  "https://amjedidiah.github.io/aestimator/js/vendor/modernizr-3.8.0.min.js",
-  "https://amjedidiah.github.io/aestimator/js/main.js",
-  "https://amjedidiah.github.io/aestimator/js/plugins.js",
-  "https://amjedidiah.github.io/aestimator/css/master.css",
-  "https://amjedidiah.github.io/aestimator/css/normalize.min.css",
+  "./",
+  "js/vendor/jquery-3.4.1.min.js",
+  "js/vendor/modernizr-3.8.0.min.js",
+  "js/main.js",
+  "js/plugins.js",
+  "./css/master.css",
+  "./css/normalize.min.css",
   "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
 ];
 const vNum = Math.floor(Math.random() * 1000000000000) + 1;
