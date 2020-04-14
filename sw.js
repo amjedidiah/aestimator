@@ -1,5 +1,5 @@
 const filesToCache = [
-  "https://amjedidiah.github.io/aestimator/",
+  "https://amjedidiah.github.io/aestimator",
   "https://amjedidiah.github.io/aestimator/js/vendor/jquery-3.4.1.min.js",
   "https://amjedidiah.github.io/aestimator/js/vendor/modernizr-3.8.0.min.js",
   "https://amjedidiah.github.io/aestimator/js/main.js",
