@@ -38,16 +38,6 @@ h6 label {
   font-weight: 500 !important;
 }
 
-img {
-  image-rendering: optimizeSpeed !important;
-}
-
-a:hover,
-a.active {
-  text-decoration: none;
-  transform: scale(1.05);
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   margin: 0;
@@ -59,10 +49,6 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
-}
-
-textarea {
-  resize: none;
 }
 
 .jumbotron {
@@ -155,18 +141,6 @@ textarea {
   font-weight: 600 !important;
 }
 
-.modal,
-.modal-dialog,
-.modal-content {
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-.modal-header,
-.modal-body,
-.modal-footer {
-  border: none;
-}
 
 .form-control,
 .form-control:-webkit-autofill,
@@ -186,14 +160,14 @@ textarea {
   font-weight: 300;
 }
 
-.form-control.form-control-primary,
+/* .form-control.form-control-primary,
 .form-control.form-control-primary:-webkit-autofill,
 .form-control.form-control-primary:-webkit-autofill:hover,
 .form-control.form-control-primary:-webkit-autofill:focus,
 .form-control.form-control-primary:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 1000px #1e80e5 inset !important;
   box-shadow: 0 0 0px 1000px #1e80e5 inset !important;
-}
+} */
 
 .form-control.form-control-warning,
 .form-control.form-control-warning:-webkit-autofill,
@@ -222,14 +196,14 @@ textarea {
   box-shadow: 0 0 0px 1000px #324170 inset !important;
 }
 
-.form-control.form-control-danger,
+/* .form-control.form-control-danger,
 .form-control.form-control-danger:-webkit-autofill,
 .form-control.form-control-danger:-webkit-autofill:hover,
 .form-control.form-control-danger:-webkit-autofill:focus,
 .form-control.form-control-danger:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 1000px #e5568b inset !important;
   box-shadow: 0 0 0px 1000px #e5568b inset !important;
-}
+} */
 
 .form-check small {
   position: relative;
@@ -305,17 +279,6 @@ button {
   clear: both;
 }
 
-.pointer {
-  cursor: pointer;
-}
-
-.just-width {
-  width: fit-content !important;
-}
-
-.just-height {
-  height: fit-content !important;
-}
 
 .btn-send {
   position: fixed;
@@ -324,10 +287,6 @@ button {
   width: 100%;
 }
 
-/* ***********************************
-    ************Toggle Switch************
-    *********************************** */
-/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -335,14 +294,12 @@ button {
   height: 20px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -371,9 +328,9 @@ input:checked + .slider {
   background-color: #161940;
 }
 
-input:focus + .slider {
+/* input:focus + .slider {
   box-shadow: 0 0 1px #161940;
-}
+} */
 
 input:checked + .slider:before {
   -webkit-transform: translateX(29px);
@@ -381,7 +338,6 @@ input:checked + .slider:before {
   transform: translateX(29px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 20px;
 }
@@ -393,10 +349,6 @@ input:checked + .slider:before {
 @media (min-width: 576px) {
   .card-columns {
     column-count: 2;
-  }
-
-  .modal-dialog.modal-md {
-    max-width: 320px !important;
   }
 
   .jumbotron .card.active .card-body {
