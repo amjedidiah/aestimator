@@ -28,3 +28,21 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
+self.addEventListener("activate", (event) => {
+  console.log("Activating new service worker...");
+
+  const cacheWhitelist = [staticCacheName];
+
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
