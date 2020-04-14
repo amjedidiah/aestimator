@@ -8,7 +8,8 @@ const filesToCache = [
   "https://amjedidiah.github.io/aestimator/css/normalize.min.css",
   "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
 ];
-const staticCacheName = "pages-cache-v1";
+const vNum = Math.floor(Math.random() * 1000000000000) + 1;
+const staticCacheName = `aestimator-cache-v${vNum}`;
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
