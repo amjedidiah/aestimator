@@ -1,6 +1,7 @@
 # #Aestimator
 
 > My submission for a Front-end Application for the #BuildForSDG Challenge
+> [My Submission](https://amjedidiah.github.io/aestimator/)
 > Link: [#BuildforSDG](https://buildforsdg.andela.com/)
 
 The assessment empowers me to **attempt** helping society and leaders prepare for the **real big problem** of COVID-19, which is **its impact on lives, health systems, supply chains, and the economy**:
