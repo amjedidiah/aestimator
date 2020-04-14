@@ -60,7 +60,6 @@
     <link rel="preconnect" href="https://kit-free.fontawesome.com" />
     <link rel="dns-prefetch" href="https://amjedidiah.github.io/aestimator" />
 
-    <link rel="stylesheet" href="css/normalize.min.css" />
     <!-- <link rel="stylesheet" href="./css/main.css" /> -->
 
     <!-- Google FOnts -->
@@ -68,30 +67,9 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@100;200;300;400;500;523;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;523;600;700;800;900&display=swap"
       rel="stylesheet"
     /> -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;800&family=Lato:ital,wght@0,400;1,400&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Animate CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
-    />
-
-    <!-- BootStrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-
-    <!-- Master CSS -->
-    <link rel="stylesheet" href="css/master.min.css" />
   </head>
 
-  <body>
+  <body style="background: #161940;">
     <!-- [if IE]>
     <p class="browserupgrade">
       You are using an <strong>outdated</strong> browser. Please
@@ -393,91 +371,18 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous" defer
+      crossorigin="anonymous"
+      defer
     ></script>
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous" async
+      crossorigin="anonymous"
+      async
     ></script>
 
     <script src="js/plugins.min.js" defer></script>
     <script src="js/main.js" defer></script>
-
-    <!-- ?: Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <!-- <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-
-      // Track js errors in Google Analytics
-      (function (window) {
-        let undefined,
-          link = function (href) {
-            let a = window.document.createElement("a");
-            a.href = href;
-            return a;
-          };
-        window.onerror = function (message, file, line, column) {
-          let host = link(file).hostname;
-          ga("send", {
-            hitType: "event",
-            eventCategory:
-              (host == window.location.hostname ||
-              host == undefined ||
-              host == ""
-                ? ""
-                : "external ") + "error",
-            eventAction: message,
-            eventLabel: (
-              file +
-              " LINE: " +
-              line +
-              (column ? " COLUMN: " + column : "")
-            ).trim(),
-            nonInteraction: 1,
-          });
-        };
-      })(window);
-
-      // Track page scroll in Google Analytics
-      $(function () {
-        let isDuplicateScrollEvent,
-          scrollTimeStart = new Date(),
-          $window = $(window),
-          $document = $(document),
-          scrollPercent;
-
-        $window.scroll(function () {
-          scrollPercent = Math.round(
-            (100 * ($window.height() + $window.scrollTop())) /
-              $document.height()
-          );
-          if (scrollPercent > 90 && !isDuplicateScrollEvent) {
-            //page scrolled to 90%
-            isDuplicateScrollEvent = 1;
-            ga(
-              "send",
-              "event",
-              "scroll",
-              "Window: " +
-                $window.height() +
-                "px; Document: " +
-                $document.height() +
-                "px; Time: " +
-                Math.round((new Date() - scrollTimeStart) / 1000, 1) +
-                "s"
-            );
-          }
-        });
-      });
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script> -->
 
     <script>
       // ServiceWorker is a progressive technology. Ignore unsupported browsers
@@ -486,6 +391,50 @@
           navigator.serviceWorker.register("sw.js")
         );
       }
+    </script>
+
+    <noscript id="deferred-styles">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;800&family=Lato:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet"
+      />
+
+      <!-- Animate CSS -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+      />
+
+      <!-- BootStrap CSS -->
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+      />
+
+      <link rel="stylesheet" href="css/normalize.min.css" />
+      <!-- Master CSS -->
+      <link rel="stylesheet" href="css/master.min.css" />
+    </noscript>
+    <script>
+      var loadDeferredStyles = function () {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement);
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf =
+        window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.msRequestAnimationFrame;
+      if (raf)
+        raf(function () {
+          window.setTimeout(loadDeferredStyles, 0);
+        });
+      else window.addEventListener("load", loadDeferredStyles);
     </script>
   </body>
 </html>
