@@ -90,7 +90,7 @@ input[type="number"] {
   right: 35px;
   font-size: 20px;
   color: #099a7e;
-  font-weight: 600;
+  font-weight: 400;
   background: transparent !important;
   box-shadow: none !important;
 }
@@ -138,7 +138,7 @@ input[type="number"] {
 }
 
 .card p.card-text {
-  font-weight: 600 !important;
+  font-weight: 400 !important;
 }
 
 
@@ -152,12 +152,12 @@ input[type="number"] {
   border-radius: 0;
   padding: 10px;
   color: #fff !important;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .form-control::placeholder {
   color: #f0f0f0;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* .form-control.form-control-primary,
@@ -213,7 +213,7 @@ input[type="number"] {
 
 .btn,
 button {
-  font-weight: 700;
+  font-weight: 400;
   border: none;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
