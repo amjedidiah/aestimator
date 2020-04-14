@@ -4,8 +4,8 @@ const filesToCache = [
   "js/vendor/modernizr-3.8.0.min.js",
   "js/main.js",
   "js/plugins.js",
-  "./css/master.css",
-  "./css/normalize.min.css",
+  "css/master.css",
+  "css/normalize.min.css",
   "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
 ];
 const vNum = Math.floor(Math.random() * 1000000000000) + 1;
@@ -31,8 +31,6 @@ self.addEventListener("fetch", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  console.log("Activating new service worker...");
-
   const cacheWhitelist = [staticCacheName];
 
   event.waitUntil(
