@@ -6,6 +6,7 @@ const filesToCache = [
   "https://amjedidiah.github.io/aestimator/js/plugins.js",
   "https://amjedidiah.github.io/aestimator/css/master.css",
   "https://amjedidiah.github.io/aestimator/css/normalize.min.css",
+  "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
 ];
 
 const staticCacheName = "pages-cache-v1";
