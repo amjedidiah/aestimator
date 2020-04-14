@@ -8,7 +8,6 @@ const filesToCache = [
   "https://amjedidiah.github.io/aestimator/css/normalize.min.css",
   "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
 ];
-
 const staticCacheName = "pages-cache-v1";
 
 self.addEventListener("install", (event) => {
@@ -21,16 +20,11 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches
-      .match(event.request)
-      .then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      })
-      .catch((error) => {
-        // TODO 6 - Respond with custom offline page
-      })
+    caches.match(event.request).then((response) => {
+      if (response) {
+        return response;
+      }
+      return fetch(event.request);
+    })
   );
 });
