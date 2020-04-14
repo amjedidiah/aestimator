@@ -30,8 +30,13 @@ self.addEventListener("fetch", (event) => {
         }
         console.log("Network request for ", event.request.url);
         return fetch(event.request);
-
-        // TODO 4 - Add fetched files to the cache
+      })
+      .then((response) => {
+        // TODO 5 - Respond with custom 404 page
+        return caches.open(staticCacheName).then((cache) => {
+          cache.put(event.request.url, response.clone());
+          return response;
+        });
       })
       .catch((error) => {
         // TODO 6 - Respond with custom offline page
